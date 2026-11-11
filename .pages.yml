@@ -1,0 +1,200 @@
+# Pages CMS beállítás: csak az alábbi négy rész szerkeszthető. Minden más fájl (kód, kapcsolat, impresszum, vélemények) rejtve marad.
+# Dokumentáció: https://pagescms.org/docs/
+
+media:
+  input: public/img
+  output: /img
+  rename: true
+  extensions: [jpg, jpeg, png, webp, avif]
+
+content:
+  - name: nyitvatartas
+    label: Nyitvatartás
+    type: file
+    path: content/szerkesztheto/nyitvatartas.json
+    format: json
+    fields:
+      - name: felirat
+        label: Rövid felirat
+        type: string
+        required: true
+        description: "Egy rövid mondat, ami az oldal tetején (kis jelvény) és az oldal alján (Nyitva rovat) jelenik meg. Legfeljebb 60 karakter."
+        options:
+          maxlength: 60
+      - name: szoveg
+        label: Nyitvatartás szöveg
+        type: text
+        required: true
+        description: "Ez jelenik meg a Nyitvatartás szakaszban. Több sort is írhat, az Enterrel új sor lesz. Legfeljebb 400 karakter."
+        options:
+          maxlength: 400
+
+  - name: bemutatkozas
+    label: Bemutatkozás (Rólunk)
+    type: file
+    path: content/szerkesztheto/bemutatkozas.json
+    format: json
+    fields:
+      - name: cim
+        label: Cím
+        type: string
+        required: true
+        description: "A Rólunk rész nagy címe. Legfeljebb 80 karakter."
+        options:
+          maxlength: 80
+      - name: bekezdesek
+        label: Bekezdések
+        type: object
+        list:
+          collapsible:
+            collapsed: false
+            summary: "{index}. bekezdés"
+        description: "A bekezdések sorrendben jelennek meg. Új bekezdést a lista aljáról adhat hozzá."
+        fields:
+          - name: szoveg
+            label: Szöveg
+            type: text
+            options:
+              maxlength: 700
+
+      - name: kohegy
+        label: Kőhegy kártya
+        type: object
+        description: "Kis kártya a Rólunk rész alatt."
+        fields:
+          - name: cim
+            label: Cím
+            type: string
+            description: "Jelenleg: Kőhegy. Legfeljebb 20 karakter."
+            options:
+              maxlength: 20
+          - name: szoveg
+            label: Szöveg
+            type: string
+            description: "A cím alatti rövid szöveg. Legfeljebb 40 karakter."
+            options:
+              maxlength: 40
+      - name: kutyabarat
+        label: Kutyabarát kártya
+        type: object
+        description: "Kis kártya a Rólunk rész alatt."
+        fields:
+          - name: cim
+            label: Cím
+            type: string
+            description: "Jelenleg: Kutyabarát. Legfeljebb 20 karakter."
+            options:
+              maxlength: 20
+          - name: szoveg
+            label: Szöveg
+            type: string
+            description: "A cím alatti rövid szöveg. Legfeljebb 40 karakter."
+            options:
+              maxlength: 40
+      - name: ar
+        label: Ár kártya
+        type: object
+        description: "A kártya alatt a rögzített „átlagos költés fejenként” felirat áll."
+        fields:
+          - name: osszeg
+            label: Átlagos költés
+            type: string
+            description: "Például: 4000–6000 Ft. Üresen hagyva a kártya kimarad. Legfeljebb 30 karakter."
+            options:
+              maxlength: 30
+      - name: ertekeles
+        label: Google-értékelés kártya
+        type: object
+        description: "A két szám a Vélemények részben is megjelenik. Csak a Google-on ténylegesen látható számot írja be. Ha az egyik üres, a kártya és a pontszám kimarad."
+        fields:
+          - name: pont
+            label: Átlagos értékelés
+            type: string
+            description: "Például: 4,7. Legfeljebb 4 karakter."
+            options:
+              maxlength: 4
+          - name: darab
+            label: Az értékelések száma
+            type: string
+            description: "Például: 341. Legfeljebb 6 karakter."
+            options:
+              maxlength: 6
+
+  - name: etlap
+    label: Étlap leírása
+    type: file
+    path: content/szerkesztheto/etlap.json
+    format: json
+    fields:
+      - name: bevezeto
+        label: Bevezető mondat
+        type: text
+        required: true
+        description: "A Mit kóstolj nálunk cím alatti bevezető. Legfeljebb 200 karakter."
+        options:
+          maxlength: 200
+      - name: sorok
+        label: Étlap sorai
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{cim}"
+        description: "Minden sor egy étel- vagy italcsoport. A sorrend a listában szereplő sorrend."
+        fields:
+          - name: cim
+            label: Név
+            type: string
+            options:
+              maxlength: 40
+          - name: leiras
+            label: Rövid leírás
+            type: text
+            options:
+              maxlength: 160
+
+  - name: etelkepek
+    label: Ételképek az étlap mellett
+    type: file
+    path: content/szerkesztheto/etelkepek.json
+    format: json
+    fields:
+      - name: kep_1
+        label: 1. kép (bal oldali, álló keret)
+        type: object
+        fields:
+          - name: fajl
+            label: Kép
+            type: image
+          - name: leiras
+            label: Képleírás
+            type: string
+            description: "Egy mondat arról, mi látszik a képen (például: Nápolyi pizza bazsalikommal az asztalon). Ezt a képet nem látó látogatók és a keresők használják. Legfeljebb 140 karakter."
+            options:
+              maxlength: 140
+      - name: kep_2
+        label: 2. kép (jobb oldali, álló keret)
+        type: object
+        fields:
+          - name: fajl
+            label: Kép
+            type: image
+          - name: leiras
+            label: Képleírás
+            type: string
+            description: "Egy mondat arról, mi látszik a képen. Legfeljebb 140 karakter."
+            options:
+              maxlength: 140
+      - name: kep_3
+        label: 3. kép (alsó, fekvő keret)
+        type: object
+        fields:
+          - name: fajl
+            label: Kép
+            type: image
+          - name: leiras
+            label: Képleírás
+            type: string
+            description: "Egy mondat arról, mi látszik a képen. Legfeljebb 140 karakter."
+            options:
+              maxlength: 140
