@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>A Kilátó Terasz weboldalának szerkesztése</title>
+<style>
+@font-face{font-family:"Figtree";font-weight:400;src:url(../public/fonts/figtree-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC}
+@font-face{font-family:"Figtree";font-weight:400;src:url(../public/fonts/figtree-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+2020,U+20A0-20AB}
+@font-face{font-family:"Figtree";font-weight:700;src:url(../public/fonts/figtree-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC}
+@font-face{font-family:"Figtree";font-weight:700;src:url(../public/fonts/figtree-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+2020,U+20A0-20AB}
+@font-face{font-family:"Gloock";font-weight:400;src:url(../public/fonts/gloock-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC}
+@font-face{font-family:"Gloock";font-weight:400;src:url(../public/fonts/gloock-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+2020,U+20A0-20AB}
+:root{--forest:#15302a;--sage:#e3e9da;--tomato:#a93820;--paper:#f3f6ee;--line:#c9d3bd}
+@page{size:A4;margin:16mm 15mm}
+*{box-sizing:border-box}
+body{font-family:"Figtree",system-ui,sans-serif;color:var(--forest);font-size:10pt;line-height:1.45;margin:0}
+h1,h2,h3{font-family:"Gloock",Georgia,serif;font-weight:400;margin:0}
+h1{font-size:25pt;line-height:1.1}
+h2{font-size:16pt;margin:0 0 3mm;break-after:avoid}
+h3{font-size:12pt;margin:0 0 1.5mm}
+p{margin:0 0 2.5mm}
+.sub{color:#4a6a60;margin:2mm 0 6mm}
+.box{background:var(--paper);border:1px solid var(--line);border-radius:3mm;padding:4mm 5mm;margin:0 0 6mm}
+.box ul{margin:0;padding-left:5mm}.box li{margin:0 0 1.5mm}
+.sec{margin:0 0 6mm;break-inside:avoid}
+.cols{display:grid;grid-template-columns:1fr 62mm;gap:6mm;align-items:start}
+.cols.wide{grid-template-columns:1fr 70mm}
+figure{margin:0}
+figure img{width:100%;display:block;border:1px solid var(--line);border-radius:2mm}
+figcaption{font-size:8.5pt;color:#4a6a60;margin-top:1.5mm}
+.num{display:inline-block;background:var(--forest);color:#fff;border-radius:50%;width:6.5mm;height:6.5mm;text-align:center;line-height:6.5mm;font-size:9.5pt;margin-right:2mm;font-weight:700}
+table{border-collapse:collapse;width:100%;margin:2mm 0 3mm;font-size:9.5pt}
+th,td{border:1px solid var(--line);padding:1.5mm 2.5mm;text-align:left;vertical-align:top}
+th{background:var(--paper)}
+.tip{border-left:3px solid var(--tomato);padding:1mm 0 1mm 3.5mm;margin:0 0 3mm}
+.no{color:var(--tomato);font-weight:700}
+ol{margin:0 0 3mm;padding-left:5.5mm}ol li{margin:0 0 1.5mm}
+.pb{break-before:page}
+.contact{font-size:11pt}
+</style>
+</head>
+<body>
+
+<h1>A Kilátó Terasz weboldalának szerkesztése</h1>
+<p class="sub">Rövid útmutató: mit és hogyan módosíthat az oldalon</p>
+
+<div class="box">
+<p><strong>Röviden</strong></p>
+<ul>
+<li>Négy dolgot tud szerkeszteni a weboldalon: <strong>1. Nyitvatartás</strong>, <strong>2. Bemutatkozás (Rólunk)</strong>, <strong>3. Étlap leírása</strong> és <strong>4. Ételképek az étlap mellett</strong>.</li>
+<li>Mentés után a módosítás <strong>néhány percen belül</strong> megjelenik az éles oldalon.</li>
+<li>Minden más (elérhetőségek, impresszum, vélemények, kinézet, videó) rögzített. Ha ezeken változtatni szeretne, újra felvehetjük a kapcsolatot.</li>
+</ul>
+</div>
+
+<div class="sec">
+<h2>Belépés a szerkesztőfelületre</h2>
+<ol>
+<li>Nyissa meg böngészőben az <strong>app.pagescms.org</strong> oldalt.</li>
+<li>Lépjen be a <strong>GitHub-fiókjával</strong>.</li>
+<li>Válassza ki a <strong>Kilátó Terasz weboldal</strong> tárolóját.</li>
+<li>Itt látja a négy szerkeszthető részt, magyar nevekkel: <em>Nyitvatartás</em>, <em>Bemutatkozás (Rólunk)</em>, <em>Étlap leírása</em>, <em>Ételképek az étlap mellett</em>.</li>
+</ol>
+</div>
+
+<div class="sec">
+<h2><span class="num">1</span>Nyitvatartás</h2>
+<div class="cols">
+<div>
+<p>Két mező tartozik hozzá:</p>
+<table>
+<tr><th>Mező</th><th>Hol jelenik meg?</th><th>Hossz</th></tr>
+<tr><td><strong>Rövid felirat</strong></td><td>Az oldal tetején, a kis jelvényben, és az oldal alján, a „Nyitva” rovatban.</td><td>legfeljebb 60 karakter</td></tr>
+<tr><td><strong>Nyitvatartás szöveg</strong></td><td>A „Nyitvatartás” szakaszban.</td><td>legfeljebb 400 karakter</td></tr>
+</table>
+<p>A szövegben az Enterrel új sort kezdhet. A szöveg alatti két sor („Aktuális nyitvatartás: Facebook” és „Kérdezz telefonon”) rögzített, azt nem kell módosítani.</p>
+<div class="tip"><strong>Példa:</strong><br>Rövid felirat: <em>Nyitva: május 1-től szeptember 30-ig</em><br>Nyitvatartás szöveg: <em>Május 1-től szeptember 30-ig minden nap 11 és 22 óra között várjuk a vendégeket.</em></div>
+</div>
+<div>
+<figure><img src="img/badge.jpg" alt=""><figcaption>A rövid felirat az oldal tetején</figcaption></figure>
+<figure style="margin-top:3mm"><img src="img/hours.jpg" alt=""><figcaption>A nyitvatartás szöveg a Nyitvatartás szakaszban</figcaption></figure>
+</div>
+</div>
+</div>
+
+<div class="sec">
+<h2><span class="num">2</span>Bemutatkozás (Rólunk)</h2>
+<div class="cols">
+<div>
+<table>
+<tr><th>Mező</th><th>Mit jelent?</th><th>Hossz</th></tr>
+<tr><td><strong>Cím</strong></td><td>A Rólunk rész nagy címe.</td><td>legfeljebb 80 karakter</td></tr>
+<tr><td><strong>Bekezdések</strong></td><td>A cím alatti szövegek. Bekezdést hozzáadhat vagy törölhet a listában. A bekezdések a listában látható sorrendben jelennek meg.</td><td>bekezdésenként legfeljebb 700 karakter</td></tr>
+</table>
+<p>A Rólunk rész alatt <strong>négy kis kártya</strong> is szerkeszthető: a „Kőhegy” és a „Kutyabarát” kártya, valamint az átlagos költést mutató ár kártya és a Google-értékelést mutató kártya.</p>
+<table>
+<tr><th>Kártya</th><th>Mit jelent?</th><th>Hossz</th></tr>
+<tr><td><strong>Kőhegy kártya</strong></td><td>Két mező: a kártya címe (jelenleg „Kőhegy”) és a rövid szöveg alatta (jelenleg „a Kőhegyi kilátó mellett”).</td><td>cím legfeljebb 20, szöveg legfeljebb 40 karakter</td></tr>
+<tr><td><strong>Kutyabarát kártya</strong></td><td>Két mező: a kártya címe (jelenleg „Kutyabarát”) és a rövid szöveg alatta (jelenleg „négylábúakkal is várunk”).</td><td>cím legfeljebb 20, szöveg legfeljebb 40 karakter</td></tr>
+<tr><td><strong>Ár kártya</strong></td><td>Az átlagos költés összege, például 4000–6000 Ft. A mellette álló „átlagos költés fejenként” felirat rögzített.</td><td>legfeljebb 30 karakter</td></tr>
+<tr><td><strong>Google-értékelés kártya</strong></td><td>Két mező: az átlagos értékelés (jelenleg 4,7) és az értékelések száma (jelenleg 341). A csillag jel és a „Google-értékelés” felirat rögzített. Ugyanez a két szám a Vélemények részben is megjelenik, ott is ez frissül. Csak a Google-on ténylegesen látható számot írja be.</td><td>értékelés legfeljebb 4, szám legfeljebb 6 karakter</td></tr>
+</table>
+</div>
+<div><figure><img src="img/about.jpg" alt=""><figcaption>A Rólunk szakasz szövege</figcaption></figure></div>
+</div>
+</div>
+
+<div class="sec">
+<h2><span class="num">3</span>Étlap leírása</h2>
+<div class="cols wide">
+<div>
+<table>
+<tr><th>Mező</th><th>Mit jelent?</th><th>Hossz</th></tr>
+<tr><td><strong>Bevezető mondat</strong></td><td>A „Mit kóstolj nálunk” cím alatti rövid szöveg.</td><td>legfeljebb 200 karakter</td></tr>
+<tr><td><strong>Étlap sorai</strong></td><td>Minden sor egy étel- vagy italcsoport. Sorokat hozzáadhat és törölhet. A sorrend a listában látható sorrend.</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;Név</td><td>A sor címe (például Lángos).</td><td>legfeljebb 40 karakter</td></tr>
+<tr><td>&nbsp;&nbsp;Rövid leírás</td><td>Egy-két mondat a sorról.</td><td>legfeljebb 160 karakter</td></tr>
+</table>
+<p>Az étlap alatti mondat (a Facebookra és a telefonszámra hivatkozik) rögzített.</p>
+</div>
+<div><figure><img src="img/menu.jpg" alt=""><figcaption>Az étlap leírása és sorai</figcaption></figure></div>
+</div>
+</div>
+
+<div class="sec">
+<h2><span class="num">4</span>Ételképek az étlap mellett</h2>
+<div class="cols">
+<div>
+<p>Három helyre tölthet fel képet. Mindegyik helyhez tartozik egy <strong>kép</strong> és egy <strong>képleírás</strong>.</p>
+<table>
+<tr><th>Hely</th><th>Keret alakja</th></tr>
+<tr><td><strong>1. kép</strong></td><td>Bal oldali, álló</td></tr>
+<tr><td><strong>2. kép</strong></td><td>Jobb oldali, álló</td></tr>
+<tr><td><strong>3. kép</strong></td><td>Alsó, fekvő</td></tr>
+</table>
+<ol>
+<li><strong>Töltse ki a helyeket sorrendben.</strong> Ha csak két képe van, az 1. és 2. helyre tegye. Ha egy hely üres marad, azt az oldal kihagyja.</li>
+<li><strong>Bármilyen telefonos vagy fényképezőgépes fotó jó</strong> (JPG, PNG, WEBP vagy AVIF). Az oldal építésekor a képet magától kisebb méretre alakítja és a megfelelő irányba fordítja, ezzel nem kell törődnie. Ha a feltöltésnél a kép nem választható ki, szívesen segítek.</li>
+<li><strong>A kép szélei levágódnak</strong>, hogy kitöltse a keretet. Ezért az ételt a kép közepére fotózza, és hagyjon körülötte helyet.</li>
+<li><strong>Képleírás:</strong> egy mondat arról, mi látszik a képen (például: <em>Nápolyi pizza bazsalikommal a kerti asztalon</em>). Legfeljebb 140 karakter. Ezt a képet nem látó látogatók és a keresők használják, a képek alatt nem jelenik meg. Ha üresen hagyja, az oldal egy általános leírást tesz be.</li>
+</ol>
+</div>
+<div><figure><img src="img/pics.jpg" alt=""><figcaption>A három kép helye az étlap mellett</figcaption></figure></div>
+</div>
+</div>
+
+<div class="sec">
+<h2>Mentés és megjelenés</h2>
+<ol>
+<li>Végezze el a módosítást, és <strong>mentse el</strong> (Save).</li>
+<li>Várjon <strong>néhány percet</strong>, amíg az oldal frissül.</li>
+<li>Töltse újra az oldalt. Számítógépen a <strong>Ctrl + F5</strong>, Macen a <strong>Cmd + Shift + R</strong> segíthet, ha a régi változatot látja. Telefonon zárja be, majd nyissa meg újra a lapot.</li>
+<li>Nézze meg telefonon is, hogyan néz ki.</li>
+<li>Ha <strong>kb. negyedóra után</strong> sem látja a változást, írjon nyugodtan.</li>
+</ol>
+</div>
+
+<div class="sec">
+<h2>Mire figyeljen</h2>
+<ul>
+<li><strong>Sima szöveget írjon.</strong> Félkövér vagy dőlt betű, hivatkozás nem készíthető. Ha különleges jeleket (például &lt; vagy &gt;) ír, azok szövegként jelennek meg.</li>
+<li><strong>Csak a szerkesztőfelületen dolgozzon.</strong> A GitHub felületén ne módosítson, ne töröljön fájlt, mert az elronthatja az oldalt.</li>
+<li><strong>Ha esetleg becsúszik valami hiba, nem gond.</strong> Minden mentés megmarad az előzményekben.</li>
+</ul>
+</div>
+
+<div class="box contact">
+<p><strong>Kérdése van, vagy valami másra lenne szüksége?</strong></p>
+<p>Lobenwein Vince<br>E-mail: lobenwein.vince@gmail.com<br>Telefon/SMS: +36 20 955 3322</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "kilato-terasz-weboldal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:preview": "node build.mjs --allow-placeholders",
+    "serve": "node serve.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.34.0"
+  },
+  "engines": { "node": ">=20" }
+}

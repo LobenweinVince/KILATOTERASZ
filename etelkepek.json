@@ -1,0 +1,14 @@
+{
+  "kep_1": {
+    "fajl": "/img/pizza.avif",
+    "leiras": "Nápolyi pizza sonkával, mozzarellával és friss bazsalikommal a kerti asztalon"
+  },
+  "kep_2": {
+    "fajl": "/img/salata.avif",
+    "leiras": "Grillezett sajt bébispenót- és rukkolaágyon, gránátalmával, tökmaggal, mandulával és naranccsal"
+  },
+  "kep_3": {
+    "fajl": "/img/spritz.avif",
+    "leiras": "Aperol spritz narancskarikával a kerti asztalon, mellette grillezett zöldségek"
+  }
+}

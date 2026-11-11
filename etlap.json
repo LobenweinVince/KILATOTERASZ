@@ -1,0 +1,29 @@
+{
+  "bevezeto": "Balatoni strandklasszikusok, magyaros kedvencek és frissítők, amelyek mellé a panoráma ingyen jár.",
+  "sorok": [
+    {
+      "cim": "Lángos",
+      "leiras": "A balatoni nyár elmaradhatatlan íze, frissen sütve."
+    },
+    {
+      "cim": "Nápolyi pizza",
+      "leiras": "Nápolyi stílusú pizza vékony tésztával és levegős peremmel."
+    },
+    {
+      "cim": "Magyaros kedvencek",
+      "leiras": "Óriás rántott szelet, csülkös babgulyás, pacalpörkölt és velős pirítós."
+    },
+    {
+      "cim": "Grill és saláták",
+      "leiras": "Grillezett ételek és könnyű saláták a forró nyári napokra."
+    },
+    {
+      "cim": "Házi limonádé",
+      "leiras": "Házi limonádék és kávé a teraszon."
+    },
+    {
+      "cim": "Bor és fröccs",
+      "leiras": "Egy pohár a kilátás mellé."
+    }
+  ]
+}

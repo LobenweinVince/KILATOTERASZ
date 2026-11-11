@@ -1,0 +1,27 @@
+{
+  "domain": "https://kilatoterasz.hu",
+  "name": "Kilátó Terasz Zamárdi",
+  "legal_name": "A Zamárdi Kőhegyi Kilátó Terasz",
+  "description": "Szezonális vendéglátóhely Zamárdiban, a Kőhegyi kilátó mellett: nápolyi pizza, lángos, óriás rántott szelet, grill, házi limonádé és kilátás a Balatonra.",
+  "phone": "06 20 286 5809",
+  "phone_tel": "+36202865809",
+  "facebook": "https://www.facebook.com/kohegy.hu",
+  "address_line1": "Kőhegyi dűlő",
+  "address_line2": "8621 Zamárdi",
+  "postal_code": "8621",
+  "street": "Kőhegyi dűlő",
+  "city": "Zamárdi",
+  "lat": "46.8709221",
+  "lng": "17.9336727",
+  "maps_cid": "12214753374323100098",
+  "hours_note": "Indulás előtt érdemes rákérdezni, főleg a szezon elején és végén.",
+  "legal": {
+    "operator_name": "[[ÜZEMELTETŐ NEVE]]",
+    "seat": "[[SZÉKHELY / LEVELEZÉSI CÍM]]",
+    "tax_number": "[[ADÓSZÁM]]",
+    "registration_number": "[[CÉGJEGYZÉKSZÁM VAGY NYILVÁNTARTÁSI SZÁM]]",
+    "email": "[[E-MAIL-CÍM]]",
+    "hosting_provider": "Cloudflare, Inc. (cloudflare.com)",
+    "updated": "[[DÁTUM]]"
+  }
+}

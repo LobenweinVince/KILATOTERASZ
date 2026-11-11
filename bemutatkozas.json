@@ -1,0 +1,26 @@
+{
+  "cim": "Szőlőlugas, lángos és a Balaton a lábad előtt",
+  "bekezdesek": [
+    {
+      "szoveg": "A Kilátó Terasz Zamárdiban, a Balaton déli partján található szezonális vendéglátóhely. Számunkra a balatoni életérzésről, a finom ételekről és a kötetlen, nyári pillanatokról szól."
+    },
+    {
+      "szoveg": "A szőlőtőkék közötti nyugalom, a gyönyörű panoráma mellett elfogyasztott ebéd és a Balaton közelsége adja a hely különleges hangulatát. Szeretnénk, ha a hozzánk érkezők nemcsak enni térnének be, hanem egy kicsit meg is állnának, kikapcsolódnának, és élveznék a környezetet."
+    }
+  ],
+  "kohegy": {
+    "cim": "Kőhegy",
+    "szoveg": "a Kőhegyi kilátó mellett"
+  },
+  "kutyabarat": {
+    "cim": "Kutyabarát",
+    "szoveg": "négylábúakkal is várunk"
+  },
+  "ar": {
+    "osszeg": "4000–6000 Ft"
+  },
+  "ertekeles": {
+    "pont": "4,7",
+    "darab": "341"
+  }
+}
